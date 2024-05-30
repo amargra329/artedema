@@ -1,0 +1,25 @@
+* {
+ -webkit-user-select: none;
+ -ms-user-select: none;
+ user-select: none;
+ --orange: #ed9600;
+ --gray: #363636;
+ --white: #ffffff;
+ --black: #000000;
+ font-family: "Montserrat";
+ color: #ffffff;
+}
+::-webkit-scrollbar {
+ display: none;
+}
+html {
+ scroll-behavior: smooth;
+}
+a,
+a:hover,
+a:link,
+a:visited,
+a:active {
+ text-decoration: none;
+ color: var(--white);
+}

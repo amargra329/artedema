@@ -1,0 +1,236 @@
+/*_____________HEADER___________*/
+header {
+ border-bottom: solid var(--gray) 1px;
+ background-image: url(../img/portada.png);
+ background-repeat: no-repeat;
+ background-size: cover;
+ background-position: 50%;
+
+ height: 100vh;
+ width: 100%;
+ display: flex;
+ align-items: center;
+ justify-content: center;
+}
+header h1 {
+ display: none;
+}
+.title {
+ display: flex;
+ justify-content: center;
+}
+.titline1,
+.titline2,
+.titline3 {
+ text-shadow: 5px 5px #2929296a;
+ font-family: "Montserrat";
+ font-weight: 700;
+ transition: font-size 0.5s;
+}
+.titline1 {
+ color: var(--orange);
+
+ font-size: 120px;
+}
+.titline2 {
+ color: var(--white);
+
+ font-size: 120px;
+}
+.titline3 {
+ color: var(--white);
+ text-shadow: 3px 3px #2929296a;
+ text-align: center;
+ font-family: "Montserrat";
+
+ font-size: 20px;
+ letter-spacing: 5px;
+}
+.title section {
+ transition: width 0.5s;
+
+ width: 120px;
+ justify-content: center;
+ display: flex;
+}
+#scrollButton {
+ position: absolute;
+ bottom: 50px;
+}
+#scrollButton img {
+ transition: width 0.5s;
+ width: 25px;
+}
+#scrollButton img:hover {
+ width: 30px;
+}
+@media screen and (max-width: 600px) {
+ .titline1,
+ .titline2 {
+  font-size: 90px;
+ }
+ .titline3 {
+  font-size: 10px;
+ }
+ .title section {
+  margin: 0 5px 0 5px;
+  width: 60px;
+ }
+}
+/*_____________MAIN_____________*/
+main {
+ background-color: var(--white);
+
+ display: flex;
+ flex-direction: column;
+}
+.intro {
+ font-family: "Montserrat";
+ color: var(--gray);
+ transition: width 0.2s;
+ line-height: 1.5;
+
+ font-size: 20px;
+ width: 1300px;
+ margin: 60px auto 60px auto;
+ text-align: center;
+}
+.gallery {
+ margin: 0 auto 50px auto;
+ display: grid;
+ grid-template-columns: repeat(3, 1fr);
+ grid-gap: 100px 50px;
+}
+.gallery section {
+ -webkit-box-shadow: 0px 0px 61px 13px rgba(62, 66, 66, 0.33);
+ -moz-box-shadow: 0px 0px 61px 13px rgba(62, 66, 66, 0.33);
+ box-shadow: 0px 0px 61px 13px rgba(62, 66, 66, 0.33);
+ border-radius: 20px;
+ transition: width 0.5s, height 0.5s;
+
+ height: 350px;
+ width: 400px;
+ overflow: hidden;
+ display: flex;
+ justify-content: center;
+ position: relative;
+}
+.galleryImage img {
+ transition: width 0.5s;
+ width: 100%;
+ position: absolute;
+ top: 50%;
+ left: 50%;
+ transform: translate(-50%, -60%);
+}
+.galleryImage img:hover {
+ width: calc(100% + 20px);
+}
+.galleryButton {
+ transition: color 0.2s;
+ background-color: var(--gray);
+ font-family: "Montserrat";
+ font-weight: 500;
+ font-size: 22px;
+
+ line-height: 60px;
+ text-align: center;
+ position: absolute;
+ bottom: 0;
+ width: 100%;
+ height: 60px;
+}
+.galleryButton:hover {
+ color: var(--orange);
+}
+@media screen and (max-width: 1350px) {
+ .intro {
+  width: 800px;
+  font-size: 20px;
+ }
+ .gallery {
+  grid-template-columns: repeat(2, 1fr);
+ }
+}
+@media screen and (max-width: 900px) {
+ .intro {
+  line-height: 1.3;
+  width: 350px;
+  font-size: 20px;
+ }
+ .gallery {
+  grid-template-columns: repeat(1, 1fr);
+ }
+}
+@media screen and (max-width: 450px) {
+ .intro {
+  width: 250px;
+  font-size: 20px;
+ }
+ .gallery section {
+  height: 300px;
+  width: 350px;
+ }
+}
+@media screen and (max-width: 400px) {
+ .gallery section {
+  height: 250px;
+  width: 300px;
+ }
+}
+/*------BRANDS------*/
+.brands {
+ transition: height 0.5s;
+
+ height: 150px;
+ position: relative;
+ align-items: center;
+}
+.brands p {
+ font-family: montserrat;
+ color: var(--black);
+ transition: width 0.2s;
+
+ margin: 0 auto 0 auto;
+ width: 100%;
+ text-align: center;
+ font-size: 20px;
+}
+.brands section {
+ justify-content: center;
+ display: flex;
+ flex-wrap: wrap;
+ margin: 0 auto 0 auto;
+}
+@media (max-width: 1350px) {
+ .brands section {
+  width: 800px;
+ }
+ .brands {
+  height: 280px;
+ }
+}
+@media (max-width: 900px) {
+ .brands {
+  height: 685px;
+ }
+ .brands section {
+  width: 280px;
+ }
+ .brands p {
+  width: 400px;
+ }
+}
+@media (max-width: 450px) {
+ .brands {
+  height: 710px;
+ }
+ .brands p {
+  width: 350px;
+ }
+}
+@media (max-width: 400px) {
+ .brands p {
+  width: 300px;
+ }
+}

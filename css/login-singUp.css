@@ -1,0 +1,128 @@
+body,
+body.swal2-height-auto {
+ border-bottom: solid var(--gray) 1px;
+ background-image: url(../img/portada.png);
+ background-repeat: no-repeat;
+ background-size: cover;
+ background-position: 50%;
+
+ height: 100vh;
+ width: 100%;
+}
+.card {
+ background: linear-gradient(135deg, #2c2c2c34, #4e4e4e79);
+ backdrop-filter: blur(10px);
+ box-shadow: 0 8px 32px 0 #0000005e;
+ border: 1px solid #ffffff2e;
+ border-radius: 10px;
+
+ position: absolute;
+ top: 50%;
+ left: 50%;
+ transform: translate(-50%, -50%);
+
+ height: 500px;
+ width: 400px;
+}
+form h2 {
+ font-size: 28px;
+
+ position: absolute;
+ top: 50px;
+ left: 50px;
+}
+#emailSingUp,
+#emailLogin,
+#password-1-SingUp,
+#password-1-Login,
+#password-2-SingUp {
+ font-size: 18px;
+ color: #555;
+ border: 2px solid #ccc;
+ border-radius: 5px;
+ outline: none;
+
+ position: absolute;
+ width: 285px;
+ height: 40px;
+ left: 50px;
+ padding: 0 0 0 10px;
+}
+#emailLogin,
+#emailSingUp {
+ top: 120px;
+}
+#password-1-Login,
+#password-1-SingUp {
+ top: 190px;
+}
+#password-2-SingUp {
+ top: 260px;
+}
+#usuario:focus,
+#password-1:focus,
+#password-2:focus,
+#submit:focus {
+ border-color: #ed96007c;
+ box-shadow: 0 0 0 0.1px #ed960067;
+}
+.acctionButton {
+ border: 2px solid #ccc;
+ border-radius: 5px;
+ outline: none;
+ font-size: 18px;
+ color: #555555;
+ background-color: #ffffff;
+ box-sizing: border-box;
+
+ position: absolute;
+ bottom: 50px;
+ width: 140px;
+ height: 40px;
+}
+#change {
+ left: 50px;
+ color: #555555;
+ text-align: center;
+ line-height: 36px;
+}
+#submit {
+ right: 50px;
+}
+
+@media screen and (max-width: 425px) {
+ .card {
+  transform: translate(0, 0);
+  top: 0;
+  left: 0;
+  height: 100vh;
+  width: 100%;
+ }
+
+ #emailSingUp,
+ #emailLogin,
+ #password-1-SingUp,
+ #password-1-Login,
+ #password-2-SingUp {
+  width: calc(100% - 100px);
+ }
+
+ .acctionButton {
+  position: absolute;
+  bottom: 50px;
+  width: calc(100% - 100px);
+  height: 40px;
+ }
+
+ #change {
+  bottom: 110px;
+ }
+
+ h2 {
+  top: 70px;
+ }
+}
+
+.acctionButton:hover {
+ border: 2px var(--orange) solid;
+}

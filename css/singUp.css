@@ -1,0 +1,33 @@
+#terminos {
+ position: absolute;
+ top: 320px;
+ left: 50px;
+}
+#terminosLab {
+ font-size: 13px;
+
+ position: absolute;
+ top: 320px;
+ left: 70px;
+ width: 300px;
+}
+#error {
+ font-style: italic;
+ font-size: 15px;
+ position: absolute;
+ bottom: 120px;
+ left: 50px;
+ width: calc(100% - 100px);
+}
+.invalid:focus {
+ background-size: 30px;
+ background-repeat: no-repeat;
+ background-position: 98% center;
+ background-image: url(../img/icons/error.png);
+}
+.valid:focus {
+ background-size: 30px;
+ background-repeat: no-repeat;
+ background-position: 98% center;
+ background-image: url(../img/icons/accept.png);
+}

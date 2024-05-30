@@ -1,0 +1,157 @@
+/*_____________NAV______________*/
+nav {
+ background: linear-gradient(135deg, #2c2c2c79, #2c2c2c79);
+ backdrop-filter: blur(10px);
+ box-shadow: 0 8px 32px 0 #0000005e;
+ border-bottom: 1px solid #ffffff2e;
+ border-radius: 0px 0px 10px 10px;
+
+ z-index: 1000;
+ height: 60px;
+ width: 100%;
+ position: fixed;
+}
+nav ul {
+ width: 100%;
+ text-align: center;
+ position: relative;
+ top: 50%;
+ transform: translate(0, -50%);
+}
+nav li {
+ list-style-type: none;
+ display: inline;
+ background-color: transparent;
+ position: relative;
+}
+nav a {
+ transition: color 0.5s, font-size 0.5s;
+ color: #e2e2e2;
+ font-family: "Montserrat", sans-serif;
+ font-weight: 500;
+ background-color: transparent;
+
+ font-size: 20px;
+ margin: 0 20px 0 20px;
+}
+nav a:hover {
+ color: var(--orange);
+}
+@media screen and (max-width: 1000px) {
+ nav a {
+  font-size: 0;
+ }
+}
+#loginButton {
+ position: absolute;
+ right: 40px;
+ top: 30px;
+}
+#loginIcon {
+ position: relative;
+}
+/*___________SUB_NAV____________*/
+nav ul ul {
+ background: linear-gradient(135deg, #32323277, #32323277);
+ backdrop-filter: blur(10px);
+ box-shadow: 0 8px 32px 0 #0000005e;
+ border-radius: 5px;
+ text-align: left;
+ transition: 0.5s;
+ transition: opacity 0.5s ease-in-out;
+
+ display: none;
+ padding: 10px 0;
+ width: 200%;
+ position: absolute;
+ top: 20px;
+ left: 0;
+ transform: translate(0, 0);
+}
+ul li:hover > ul {
+ display: block;
+}
+/*_____________MENU_____________*/
+nav img {
+ transition: transform 0.5s;
+ cursor: pointer;
+ z-index: 2000;
+
+ position: absolute;
+ top: 50%;
+ right: 0;
+ transform: translate(100%, -50%);
+ width: 40px;
+}
+nav #menuCheckbox {
+ display: none;
+}
+nav label {
+ position: absolute;
+ top: 50%;
+ right: 20px;
+ width: 30px;
+ height: 30px;
+ transform: translate(0, -50%);
+}
+@media screen and (max-width: 1000px) {
+ #loginButton {
+  position: absolute;
+  right: 90px;
+ }
+ label {
+  z-index: 100;
+ }
+ nav ul {
+  background: linear-gradient(135deg, #474747dd, #474747dd);
+  transition: 0.5s;
+
+  position: fixed;
+  top: 0;
+  right: -100%;
+  height: 100vh;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  transform: translate(0, 0);
+ }
+ ul li:hover > ul {
+  display: none;
+ }
+ #menuCheckbox:checked ~ ul {
+  right: 0;
+ }
+ #menuCheckbox:checked ~ ul li {
+  display: block;
+  text-align: center;
+  margin: 20px 0 0 0;
+ }
+ #menuCheckbox:checked ~ ul li a {
+  font-family: "Montserrat", sans-serif;
+  font-weight: 500;
+
+  font-size: 30px;
+  margin: 0 20px 0 20px;
+ }
+ #menuButton div {
+  background-color: #c9c9c9;
+  border-radius: 2px;
+  transition: ease 0.2s;
+
+  transform: translate(0, -50%);
+  position: absolute;
+  height: 10%;
+  width: 100%;
+ }
+ #menuButton #bar1 {
+  top: 15%;
+ }
+ #menuButton #bar2 {
+  top: 50%;
+ }
+ #menuButton #bar3 {
+  top: 85%;
+ }
+}
